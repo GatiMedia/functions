@@ -1,4 +1,4 @@
-def ShuffleRGB():
+def shuffleRGB():
     for node in nuke.selectedNodes():
         try:
             dot = nuke.nodes.Dot()
@@ -40,4 +40,4 @@ def ShuffleRGB():
         except Exception:
             pass
 
-showMenu.addCommand('Shuffle RGB', 'ShuffleRGB()', shortcut='ctrl+h', index=0 )
+showMenu.addCommand('Shuffle RGB', 'shuffleRGB()', shortcut='ctrl+h', index=0 )
