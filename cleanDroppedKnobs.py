@@ -6,5 +6,9 @@ def cleanDroppedKnobs():
                     node.removeKnob(node[knob])
                 except:
                     pass
-                    
+
+# Add to custom menu
 utilitiesMenu.addCommand('Clean Dropped Knobs', 'cleanDroppedKnobs()', index=5)
+
+# Apply on Script Load
+nuke.addOnScriptLoad(cleanDroppedKnobs)
