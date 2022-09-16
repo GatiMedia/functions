@@ -1,5 +1,5 @@
 def cleanDroppedKnobs():
-    for node in nuke.allNodes():
+    for node in nuke.allNodes(recurseGroups=True):
         for knob in node.knobs():
             if 'panelDropped' in knob:
                 try:
