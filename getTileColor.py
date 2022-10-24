@@ -9,17 +9,17 @@ def getTileColor(nodes):
             tileColorNew = n['tile_color'].value()
             if tileColorNew == 0:
                 tileColorNew = None
-                ###cache
-                class02 = [i.capitalize() for i in nuke.toNode('preferences')['NodeColourClassCache'].value().split()]
-                for c in class02:
+                ### cache ###
+                classCache = [i.capitalize() for i in nuke.toNode('preferences')['NodeColourClassCache'].value().split()]
+                for c in classCache:
                     if c in nClass:
                         tileColorNew = nuke.toNode('preferences')['NodeColourCacheColor'].value()
-                ###deep
-                class02 = [i.capitalize() for i in nuke.toNode('preferences')['NodeColourClassDeep'].value().split()]
-                for c in class02:
+                ### deep ###
+                classDeep = [i.capitalize() for i in nuke.toNode('preferences')['NodeColourClassDeep'].value().split()]
+                for c in classDeep:
                     if c in nClass:
                         tileColorNew = nuke.toNode('preferences')['NodeColourDeepColor'].value()
-                ###01-14
+                ### 01-14 ###
                 for num in range(14):
                     className = 'NodeColourClass'+str(num+1).zfill(2)
                     classColor = 'NodeColour'+str(num+1).zfill(2)+'Color'
