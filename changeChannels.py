@@ -2,6 +2,7 @@ def changeChannels():
     sel_nodes = nuke.selectedNodes()
     if len(sel_nodes) > 0:
         ok_channels = ['all', 'none', 'rgba', 'rgb', 'alpha']
+        ok_channels_shuffle = ['none', 'rgba', 'rgb', 'alpha']
 
         for sel_node in sel_nodes:
             
@@ -35,10 +36,9 @@ def changeChannels():
             # setting up for old shuffle node
             if sel_node.knob('in'):
                 channels = ['red','green','blue','alpha']
-                ok_channels.remove('all')
-                if not sel_node['in'].value() == "alpha" and sel_node.knob('in').value() in ok_channels:
-                    channel_index = ok_channels.index(sel_node['in'].value())
-                    sel_node['in'].setValue(ok_channels[channel_index + 1])
+                if not sel_node['in'].value() == "alpha" and sel_node.knob('in').value() in ok_channels_shuffle:
+                    channel_index = ok_channels_shuffle.index(sel_node['in'].value())
+                    sel_node['in'].setValue(ok_channels_shuffle[channel_index + 1])
                 else:
                     sel_node['in'].setValue('none')
                 if sel_node['in'].value() == "none":
@@ -58,10 +58,9 @@ def changeChannels():
 
             # setting up for new shuffle node
             if sel_node.knob('in1'):
-                ok_channels.remove('all')
-                if not sel_node['in1'].value() == "alpha" and sel_node.knob('in1').value() in ok_channels:
-                    channel_index = ok_channels.index(sel_node['in1'].value())
-                    sel_node['in1'].setValue(ok_channels[channel_index + 1])
+                if not sel_node['in1'].value() == "alpha" and sel_node.knob('in1').value() in ok_channels_shuffle:
+                    channel_index = ok_channels_shuffle.index(sel_node['in1'].value())
+                    sel_node['in1'].setValue(ok_channels_shuffle[channel_index + 1])
                 else:
                     sel_node['in1'].setValue('none')
                 if sel_node['in1'].value() == "none":
