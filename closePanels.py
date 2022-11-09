@@ -1,3 +1,5 @@
+import nuke
+
 def closePanels():
     for node in nuke.allNodes(recurseGroups=True):
         node.hideControlPanel()
