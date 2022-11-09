@@ -1,3 +1,5 @@
+import nuke
+
 def disconnectViewers():
     nuke.selectAll()
     nuke.invertSelection()
