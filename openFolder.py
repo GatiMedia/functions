@@ -1,3 +1,5 @@
+import nuke
+
 def openFolder():
     import platform
     import subprocess
