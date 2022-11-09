@@ -1,3 +1,5 @@
+import nuke
+
 def addRetime():
     for node in nuke.selectedNodes():
         try:
