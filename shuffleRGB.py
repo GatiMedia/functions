@@ -1,3 +1,5 @@
+import nuke
+
 def shuffleRGB():
     for node in nuke.selectedNodes():
         try:
