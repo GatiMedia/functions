@@ -1,3 +1,5 @@
+import nuke
+
 def changeChannels():
     sel_nodes = nuke.selectedNodes()
     if len(sel_nodes) > 0:
