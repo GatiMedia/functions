@@ -1,3 +1,5 @@
+import nuke
+
 def RotoBlur_Shortcut():
     y_offset = 60
     r = nuke.createNode('Roto', 'output alpha')
