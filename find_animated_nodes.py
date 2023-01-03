@@ -26,7 +26,7 @@ class animNodesWindow(nukescripts.PythonPanel):
         self.addKnob(self.spaceKnob)
 
         self.infoKnob = nuke.Text_Knob('info', '')
-        self.infoKnob.setValue('<p style="font-size:15px">&#128269; Select an Animated Node to Zoom on it!</p>')
+        self.infoKnob.setValue('<p style="font-size:15px">&#128269; Select an Animated Node to Zoom on!</p>')
         self.addKnob(self.infoKnob)
 
         self.spaceKnob2 = nuke.Text_Knob('space3', '')
