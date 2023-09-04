@@ -38,5 +38,3 @@ def openFolder():
         else:
             nuke.message(
                 """<center><font color=orange>Select a single node with a <font color=yellow><u><a href="https://learn.foundry.com/nuke/developers/63/ndkdevguide/knobs-and-handles/knobtypes.html#knobs-knobtypes-file-knob"><font color=yellow>File</a></u><font color=orange> knob!""")
-
-utilitiesMenu.addCommand('Open Folder in file browser', 'openFolder()', shortcut='ctrl+f', index=4)
